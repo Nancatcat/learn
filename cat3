@@ -1,0 +1,18 @@
+#define  _CRT_SECURE_NO_WARNINGS 1		
+#include<stdio.h>
+
+int main()
+{ //int是类型 用类型创建变量（age变量名字）
+
+	int age = 20;
+	double weight = 75.3;
+	age = age + 1;
+	weight = weight - 20;
+	printf("%d\n", age);
+	printf("%lf\n", weight);
+	return 0;
+
+	
+}//%d 整型
+//%f float
+//%lf double
