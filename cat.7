@@ -1,0 +1,70 @@
+
+#define  _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+
+	int i = 1;
+	while (i <= 100)
+	{
+		printf("%d ", i);
+		i+=2;
+	}
+
+	return 0;
+}
+int main()
+{
+	int a = 0;
+	while (a <= 100)
+	{
+		if(a%2==1)
+		printf("%d\n", a);
+		a++;
+	}
+
+	return 0;
+}
+int main()
+{
+	int a = 1;
+	int b = 2;
+	switch (b)
+	{
+	case 1:a++;
+	case 2:b++;
+		break;
+	default:
+		break;
+		
+	}
+	printf("a=%d,b=%d", a, b);
+
+	return 0;
+
+ int main()
+ {
+    int n = 1;
+	int m = 2;
+	switch (n)
+	{
+	case 1:m++;
+	case 2:n++;
+	case 3:
+		switch (n)
+		{
+		case 1:n++;
+		case 2:
+			m++;n++;
+			break;
+		}
+	case 4:	
+		m++;
+		break;
+	default:
+		break;
+	}
+	printf("m =	%d, n = %d\n", m, n);
+	return 0;
+}
