@@ -93,3 +93,27 @@
 //	}
 //	return 0;
 //}
+i/*nt main()
+{
+	int n = 0;
+	int sum = 0;
+	int i = 1;
+	int ret = 1;
+	for (n = 1; n <=10; n++)
+	{ ret = 1;
+		for (i = 1; i <= n; i++)
+		{
+			ret*= i;
+		}
+		sum +=ret;
+	}
+	printf("%d ", sum);
+	return 0;
+}*/
+	int  main()
+{
+	int a = 2;
+	printf("%d %d %d", i *= 2, ++a, a++);
+
+	return 0;
+}
