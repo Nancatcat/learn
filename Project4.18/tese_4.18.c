@@ -236,61 +236,61 @@
 //}
 
 
-//#include<time.h>
-//#include<stdlib.h>
-//void tese()
-//{	
-//	printf("************************\n");
-//	printf("**********1.猜数字********\n");
-//	printf("**********0.退  出********\n");
-//	printf("************************\n");
-//}
-//void game()
-//{
-//	
-//	int ret = rand()%100+1;
-//	int i = 0;
-//	while (1)
-//	{
-//		printf("请输入要猜的数字\n");
-//		scanf("%d", &i);
-//		if (i < ret)
-//		{
-//			printf("猜小了\n");
-//		}
-//		else if (i > ret)
-//		{
-//			printf("猜大了\n");
-//		}
-//		else
-//		{
-//			printf("猜对了\n");
-//			break;
-//		}
-//	}
-//}
-//int main()
-//{
-//	int w = 0;
-//	srand((unsigned int)time(NULL)); 
-//	do
-//	{
-//		tese();
-//		scanf("%d", &w);
-//		switch (w)
-//		{
-//		case 1:
-//		{game();
-//		break; }
-//		case 0:
-//		{break;
-//		}
-//
-//		default:
-//			printf("重新输入\n");
-//			break;
-//
-//		}
-//	} while (w);
-//	return 0;
-//}
+#include<time.h>
+#include<stdlib.h>
+void tese()
+{	
+	printf("************************\n");
+	printf("**********1.猜数字********\n");
+	printf("**********0.退  出********\n");
+	printf("************************\n");
+}
+void game()
+{
+	
+	int ret = rand()%100+1;
+	int i = 0;
+	while (1)
+	{
+		printf("请输入要猜的数字\n");
+		scanf("%d", &i);
+		if (i < ret)
+		{
+			printf("猜小了\n");
+		}
+		else if (i > ret)
+		{
+			printf("猜大了\n");
+		}
+		else
+		{
+			printf("猜对了\n");
+			break;
+		}
+	}
+}
+int main()
+{
+	int w = 0;
+	srand((unsigned int)time(NULL)); 
+	do
+	{
+		tese();
+		scanf("%d", &w);
+		switch (w)
+		{
+		case 1:
+		{game();
+		break; }
+		case 0:
+		{break;
+		}
+
+		default:
+			printf("重新输入\n");
+			break;
+
+		}
+	} while (w);
+	return 0;
+}
