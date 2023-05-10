@@ -29,15 +29,15 @@
 //	return 0;
 //}
 //判断大小端存储；
-int main()
-{
-	int i = 1;
-	int* p = (char*)&i;
-	if (*p == 1)
-	{
-		printf("小端\n");
-	}
-	else
-		printf("大端\n");
-	return 0;
-}
+//int main()
+//{
+//	int i = 1;
+//	char* p = (char*)&i;
+//	if (*p == 1)
+//	{
+//		printf("小端\n");
+//	}
+//	else
+//		printf("大端\n");
+//	return 0;
+//}

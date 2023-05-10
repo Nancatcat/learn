@@ -1,0 +1,3 @@
+﻿  tese.c
+G:\code\learn\learn5_10\tese.c(35,1): warning C4133: “初始化”: 从“char *”到“int *”的类型不兼容
+  learn5_10.vcxproj -> G:\code\learn\learn5_10\Debug\learn5_10.exe
