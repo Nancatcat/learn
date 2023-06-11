@@ -1,0 +1,12 @@
+windows桌面版更改为中文
+1、首先，下载Notion中文语言包文件 notion-zh_CN.js ，下载网址：https://github.com/Reamd7/notion-zh_CN/releases/(无法下载是网络问题，我的懒人包里都有）
+2、找到notion安装目录：C:\Users\用户名\AppData\Local\Programs\Notion\
+3、打开C:\Users\用户名\AppData\Local\Programs\Notion\resources\app\renderer文件夹
+4、下载 notion-zh_CN.js 到上述文件夹（renderer）
+5、使用记事本打开 renderer 文件夹内的 preload.js 文件，在最后一行，添加以下代码，然后保存。
+
+
+require("./notion-zh_CN") // 添加这一行
+
+6、关闭notion，重新打开notion即变为中文。
+7、notion默认安装在c盘，如你需要修改路径，直接把C:\Users\用户名\AppData\Local\Programs\Notion这个安装路径的文件复制到你想要的xx盘中，并运行notion文件夹中的notion.exe也可以直接运行,也可以增加快捷方式到桌面。（原先的桌面快捷方式不可用需删除）
