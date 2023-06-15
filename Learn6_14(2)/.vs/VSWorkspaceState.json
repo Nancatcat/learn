@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Debug",
+    "\\Debug\\Learn6_12.tlog"
   ],
-  "SelectedNode": "\\contact.c",
+  "SelectedNode": "\\rese.c",
   "PreviewInSolutionExplorer": false
 }

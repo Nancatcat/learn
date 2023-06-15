@@ -58,31 +58,31 @@
 //	p == NULL;
 //	return 0;
 //}
-int main()
-{
-	FILE* p = fopen("pf.txt", "rb");
-	if (p == NULL)
-	{
-		perror("p");
-		return 0;
-	}
-	fseek(p, 12, SEEK_SET);
-	int arr= fgetc(p);
-	printf("%c\n", arr);
-	fseek(p, 12, SEEK_SET);
-	arr = fgetc(p);
-	printf("%c\n", arr);
-	fseek(p, 2, SEEK_CUR);
-	arr = fgetc(p);
-	printf("%c\n", arr);
-	fseek(p, -4, SEEK_END);
-	arr = fgetc(p);
-	printf("%c\n", arr);
-	printf("%d\n", ftell(p));
-	rewind(p);
-	arr = fgetc(p);
-	printf("%c\n", arr);
-	fclose(p);
-	p == NULL;
-	return 0;
-}
+//int main()
+//{
+//	FILE* p = fopen("pf.txt", "rb");
+//	if (p == NULL)
+//	{
+//		perror("p");
+//		return 0;
+//	}
+//	fseek(p, 12, SEEK_SET);
+//	int arr= fgetc(p);
+//	printf("%c\n", arr);
+//	fseek(p, 12, SEEK_SET);
+//	arr = fgetc(p);
+//	printf("%c\n", arr);
+//	fseek(p, 2, SEEK_CUR);
+//	arr = fgetc(p);
+//	printf("%c\n", arr);
+//	fseek(p, -4, SEEK_END);
+//	arr = fgetc(p);
+//	printf("%c\n", arr);
+//	printf("%d\n", ftell(p));
+//	rewind(p);
+//	arr = fgetc(p);
+//	printf("%c\n", arr);
+//	fclose(p);
+//	p == NULL;
+//	return 0;
+//}

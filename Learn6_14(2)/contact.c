@@ -41,7 +41,7 @@ void InitContact(Contact* pc)//初始化通讯录
 	pc->count = 0;
 	PeoInfo* ptr = (PeoInfo*)calloc(Increase, sizeof(PeoInfo));
 	if (ptr == NULL)
-	{
+	{`11`	
 		printf("%s", strerror(errno));
 		return;
 	}
