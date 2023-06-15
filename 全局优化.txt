@@ -1,0 +1,19 @@
+[user]
+	name = Nancatcat
+	email = 2710514756@qq.com
+	signingkey = nanmiao517
+[http]
+	sslVerify = false
+[https]
+	sslVerify = false
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:7890
+
+新
+[user]
+	name = Nancatcat
+	email = 2710514756@qq.com
+	signingkey = nanmiao517
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:7890
+
