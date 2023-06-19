@@ -181,13 +181,94 @@
 //
 //	return 0;
 //}
-
-#define SWAP_BIT(n) n=(((n&0x55555555)<<1)+((n&0xaaaaaaaa)>>1))
-int main()
-{
-	int n = 0;
-	scanf("%d", &n);
-	SWAP_BIT(n);
-	printf("%d\n", n);
-	return 0;
-}
+//
+//#define SWAP_BIT(n) n=(((n&0x55555555)<<1)+((n&0xaaaaaaaa)>>1))
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	SWAP_BIT(n);
+//	printf("%d\n", n);
+//	return 0;
+ //}
+//int main()
+//{
+//	char a = 0, ch;
+//	printf("%c", ch);
+//}
+#include<math.h>
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	int a = 0;
+//	int b = 1;
+//	int c = a + b;
+//	while (1)
+//	{
+//		if (n == b)
+//		{
+//			printf("%d\n", 0);
+//			break;
+//		}
+//		else if (n < b)
+//		{
+//			if (abs(a - n) > abs(b - n))
+//			{
+//				printf("%d", abs(b - n));
+//				
+//			}
+//			else
+//			{
+//				printf("%d", abs(a - n));
+//
+//			}
+//			break;
+//		}
+//		c = a + b;
+//		a = b;
+//		b = c;
+//	}
+//	return 0;
+//}
+//#include<string.h>
+//void Space(char* arr, int len)
+//{
+//	char* str = arr;
+//	int count = 0;
+//	while (*str)
+//	{
+//		if (*str == ' ')
+//		{
+//			count++;
+//		}
+//			str++;
+//		
+//	}
+//	int dog1 = len - 1;
+//	int dog2 = len + count * 2-1;
+//	while (dog1 != dog2)
+//	{
+//		if (str[dog1] != ' ')
+//		{
+//			str[dog2--] = str[dog1--];
+//		}
+//		else
+//		{
+//			dog1--;
+//			str[dog2--] = '0';
+//			str[dog2--] = '2';
+//			str[dog2--] = '%';
+//		}
+//
+//	}
+//
+//}
+//int main()
+//{
+//	char arr[50] = "hello world hello bit";
+//	int len = strlen(arr);
+//	Space(arr, len);
+//	printf("%s\n", arr);
+//	return 0;
+//}
