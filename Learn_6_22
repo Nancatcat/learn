@@ -1,0 +1,163 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+//int main()
+//{
+//	float n = 0;
+//	float MAX = 0;
+//	float MIN = 100;
+//	float sum = 0;
+//	int flang = 1;
+//	while (scanf("%f", &n) != EOF)
+//	{
+//		if (n > 100 || n < 0)
+//		{
+//			return EOF;
+//		}
+//		else
+//		{
+//			if (n > MAX)
+//			{
+//				n = MAX;
+//				flang++;
+//			}
+//			if (n < MIN)
+//			{
+//				n = MIN;
+//				flang++;
+//			}
+//			sum += n;
+//			if (flang == 3)
+//			{
+//				sum /= flang;
+//				printf("%.2f", sum);
+//				return 0;
+//			}
+//		}
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//    int n = 0;
+//    scanf("%d",&n);
+//    float arr[100];
+//    float MAX = 0.0;
+//    float MIN = 100.0;
+//    int i = 0;
+//    float sum = 0.0;
+//    for (i = 0; i < n; i++)
+//    {
+//        scanf("%f", &arr[i]);
+//        if (MAX<arr[i])
+//        {
+//            MAX = arr[i];
+//        }
+//        if (MIN>arr[i])
+//        {
+//            MIN = arr[i];
+//        }
+//        sum += arr[i];
+//    }
+//    printf("%.2f %.2f %.2f", MAX, MIN, sum / n);
+//
+//    return 0;
+//}
+//#include<stdio.h>
+#include<math.h>
+//int main() 
+//{
+//	int a, b, c;
+//	scanf("%d %d %d", &a, &b, &c);
+//	float d, e, p;
+//	d = a + b + c;
+//	p = d / 2;
+//	e = sqrt(p * (p - a) * (p - b) * (p - c));
+//	printf("circumference=%.2f area=%.2f", d, e);
+//	return 0;
+//}
+//int main()
+//{
+//	int n = 0;
+//	int h = 0;
+//	int m = 0;
+//	scanf("%d %d %d", &n, &h, &m);
+//	if (m <= (n * h))
+//	{
+//		n -= ((m / h) + (m % h));
+//		printf("%d", n);
+//	}
+//	return 0;
+//}
+//int main()
+//{
+//	float c = 0.0;
+//	scanf("%f", &c);
+//	float f = 5.0 / 9 * (c - 32);
+//	printf("%.3f",f);
+//	return 0;
+//}
+//int main()
+//{
+//	float r = 0;
+//	scanf("%f", &r);
+//	printf("%.2f", 3.14 * pow(r, 2));
+//	return 0;
+//}
+//int main()
+//{
+//	float r1 = 0.0;
+//	float r2 = 0.0;
+//	scanf("%f %f", &r1, &r2);
+//	printf("%.1f", 1.0 / ((1.0/ r1) + (1.0 / r2)));
+//	return 0;
+//}
+
+//#include <stdbool.h>
+//int main()
+//{
+//    int h, r;
+//    double n, v, a;
+//    scanf("%d %d", &h, &r);
+//    v = 3.14 * h * r * r;
+//    n = 10000 / v;
+//    bool s = 10000 % (int)v;
+//    printf("%d", ((int)n) + s);
+//    return 0;
+//
+//}
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	scanf("%d %d", &a, &b);
+//	int c = b - a;
+//	printf("%d", c + b);
+//	return 0;
+//}
+//int main()
+//{
+//	float r = 0.0;
+//	scanf("%f", &r);
+//	float area =4.0/3*3.14*pow(r,3);
+//	printf("%.2f", area);
+//
+//	return 0;
+//}
+//int main()
+//{
+//	int hour = 0;
+//	int minute = 0;
+//	int k = 0;
+//	scanf("%d:%d %d", &hour, &minute, &k);
+//	int h = (hour + (minute + k) / 60) % 24;
+//	int m = (minute + k) % 60;
+//	printf("%02d:%02d", h, m);
+//	return 0;
+//}
+//int main()
+//{
+//	int n = 0;
+//	scanf("%d", &n);
+//	printf("%d", ((n / 12) * 4 + 2));
+//	return 0;
+//}
