@@ -1,0 +1,4 @@
+﻿  SeqListTest.c
+G:\code\learn\SeqListNode(单链表)\SeqListTest.c(13,27): warning C4013: “SeqListFind”未定义；假设外部返回 int
+G:\code\learn\SeqListNode(单链表)\SeqListTest.c(13,1): warning C4047: “初始化”:“SeNode *”与“int”的间接级别不同
+  SeqListNode(单链表).vcxproj -> G:\code\learn\SeqListNode(单链表)\Debug\SeqListNode(单链表).exe
