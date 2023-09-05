@@ -1,31 +1,30 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WAENINGS 1
 #pragma once
 
 
-#include<stdlib.h>
+
 #include<stdio.h>
-#include<assert.h>
+#include<stdlib.h>
 #include<stdbool.h>
- 
+#include<assert.h>
+
 
 typedef int HeapDataType;
-
 typedef struct Heap
 {
-	HeapDataType* Data;
-	int size;
+	HeapDataType* node;
 	int capacity;
+	int size;
 }Heap;
 
-
-void AdjustUp(HeapDataType* Data, int chlid);
-void AdjustDown(HeapDataType*Data,int n,int parent);
-
-void HeapInit(Heap* pHe);
-void HeapDestroy(Heap* pHe);
-void HeapPush(Heap* pHe, HeapDataType x);
-void HeapPop(Heap* pHe);
-void HeapPrintf(Heap* pHe);
-HeapDataType HeapTop(Heap* pHe);
-int HeapSize(Heap* pHe);
-bool HeapEmpty(Heap* pHe);
+void Swap(HeapDataType* p1, HeapDataType* p2);
+void AdjustUp(HeapDataType* pnode, int chlid);
+void AdjustDown(HeapDataType* pnode, int size, int parent);
+void HeapInit(Heap* pnode);
+void HeapDestory(Heap* pnode);
+void Heapprintf(Heap* pnode);
+void HeapPush(Heap* pnode, HeapDataType x);
+void HeapPop(Heap* pnode);
+HeapDataType HeapTop(Heap* pnode);
+int HeapSize(Heap* pnode);
+bool HeapEmpty(Heap* pnode);

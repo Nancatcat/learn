@@ -1,29 +1,20 @@
-#define _CRT_SECURE_NO_WARNINGS 1
+#define _CRT_SECURE_NO_WAENINGS 1
 #include"Heap.h"
+
 void Swap(HeapDataType* p1, HeapDataType* p2)
 {
-	HeapDataType tmp = *p1;
+	HeapDataType x = *p1;
 	*p1 = *p2;
-	*p2 = tmp;
+	*p2 = x;
 }
-void HeapPrintf(Heap* pHe)
+void AdjustUp(HeapDataType* pnode, int child)
 {
-	assert(pHe);
-	for (int i = 0; i < pHe->size; i++)
-	{
-		printf("%d ", pHe->Data[i]);
-	}
-	printf("\n");
-}
-void AdjustUp(HeapDataType* Data, int child)
-{
-
 	int parent = (child - 1) / 2;
 	while (child > 0)
 	{
-		if (Data[child] < Data[parent])
+		if (pnode[child] < pnode[parent])
 		{
-			Swap(&Data[child],&Data[parent]);
+			Swap(&pnode[child], &pnode[parent]);
 			child = parent;
 			parent = (child - 1) / 2;
 		}
@@ -33,18 +24,18 @@ void AdjustUp(HeapDataType* Data, int child)
 		}
 	}
 }
-void AdjustDown(HeapDataType* Data, int size, int parent)
+void AdjustDown(HeapDataType* pnode, int size, int parent)
 {
 	int child = parent * 2 + 1;
 	while (child < size)
 	{
-		if (child + 1 < size && Data[child + 1] < Data[child])
+		if (pnode[child + 1] < pnode[child]&&child+1<size)
 		{
 			child++;
 		}
-		if (Data[child] < Data[parent])
-		{ 
-			Swap(&Data[child], &Data[parent]);
+		if (pnode[child] < pnode[parent])
+		{
+			Swap(&pnode[parent], &pnode[child]);
 			parent = child;
 			child = parent * 2 + 1;
 		}
@@ -53,61 +44,74 @@ void AdjustDown(HeapDataType* Data, int size, int parent)
 			break;
 		}
 	}
-	
+
 }
-void HeapInit(Heap* pHe)
+void HeapInit(Heap* pnode)
 {
-	assert(pHe);
-	pHe->Data = NULL;
-	pHe->capacity = pHe->size = 0;
+	assert(pnode);
+	pnode->capacity = pnode->size = 0;
+	pnode->node = NULL;
 }
-void HeapDestroy(Heap* pHe)
+void HeapDestory(Heap* pnode)
 {
-	assert(pHe);
-	free(pHe->Data);
-	pHe->Data = NULL;
-	pHe->capacity = pHe->size = 0;
+	assert(pnode);
+	free(pnode->node);
+	pnode->node = NULL;
+	pnode->capacity = pnode->size = 0;
 }
-void HeapPush(Heap* pHe, HeapDataType x)
+void Heapprintf(Heap* pnode)
 {
-	assert(pHe);
-	if (pHe->capacity == pHe->size)
+	assert(pnode);
+	for (int i = 0; i < pnode->size; i++)
 	{
-		int newcapacity = pHe->capacity == 0 ? 4 : pHe->capacity * 2;
-		HeapDataType* tmp = 
-			(HeapDataType*)realloc(pHe->Data, sizeof(HeapDataType) *newcapacity);
-		if (tmp == NULL)
-		{
-			perror("HeapPush fail");
-			exit(-1);
-		}
-		pHe->Data = tmp;
-		pHe->capacity = newcapacity;
+		printf("%d ", pnode -> node[i]);
 	}
-	pHe->Data[pHe->size] = x;
-	pHe->size++;
-	AdjustUp(pHe->Data, pHe->size - 1);
+	printf("\n");
 }
-void HeapPop(Heap* pHe)
+void HeapPush(Heap* pnode, HeapDataType x)
 {
-	assert(pHe);
-	assert(!HeapEmpty(pHe));
-	Swap(&pHe->Data[0], &pHe->Data[pHe->size - 1]);
-	pHe->size--;
-	AdjustDown(pHe->Data, pHe->size, 0);
+	assert(pnode);
+	if (pnode->capacity == pnode->size)
+	{
+		int newcapacity = 
+			pnode->capacity == 0 ? 4 :
+			pnode->capacity * 2;
+		HeapDataType* newnode =
+			(HeapDataType*)realloc
+			(pnode->node, newcapacity * sizeof(HeapDataType));
+		if (newnode==NULL)
+		{
+			perror("HeapPush realloc fail");
+			return;
+		}
+		pnode->node =newnode;
+		pnode->capacity = newcapacity;
+	}
+	pnode->node[pnode->size] = x;
+	pnode->size++;
+	AdjustUp(pnode->node, pnode->size - 1);
 }
-HeapDataType HeapTop(Heap* pHe)
+void HeapPop(Heap* pnode)
 {
-	assert(pHe);
-	return pHe->Data[0];
+	assert(pnode);
+	assert(pnode->size > 0);
+	Swap(&pnode->node[0], &pnode->node[pnode->size - 1]);
+	pnode->size--;
+	AdjustDown(pnode->node, pnode -> size, 0);
 }
-int HeapSize(Heap* pHe)
+HeapDataType HeapTop(Heap* pnode)
 {
-	assert(pHe);
-	return pHe->size;
+	assert(pnode);
+	assert(!HeapEmpty(pnode));
+	return pnode->node[0];
 }
-bool HeapEmpty(Heap* pHe)
+int HeapSize(Heap* pnode)
 {
-	assert(pHe);
-	return pHe->size == 0;
+	assert(pnode);
+	return pnode->size;
+}
+bool HeapEmpty(Heap* pnode)
+{
+	assert(pnode);
+	return pnode->size == 0;
 }
