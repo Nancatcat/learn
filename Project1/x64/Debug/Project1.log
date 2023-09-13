@@ -1,0 +1,6 @@
+﻿  Tree.c
+E:\Bit\Code\Project1\Tree.c(8,3): warning C4033: “BuyNode”必须返回值
+  TreeText.c
+  正在生成代码...
+E:\Bit\Code\Project1\Tree.c(14): warning C4715: “BuyNode”: 不是所有的控件路径都返回值
+  Project1.vcxproj -> E:\Bit\Code\Project1\x64\Debug\Project1.exe
